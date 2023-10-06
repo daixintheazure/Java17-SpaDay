@@ -8,18 +8,31 @@
 <body>
 
 <form action="/user" method="POST">
+
     <label>Username
         <input type="text" name="username" th:value="${username}">
     </label>
+
     <label>E-mail
         <input type="email" name="email" th:value="${email}">
     </label>
+
     <label>Password
         <input type="password" name="password" th:value="${password}">
     </label>
+
+    <label>Verify Password:
+    <input type="password" name="verify">
+    </label>
+
     <label>
+
+        <p th:text="${error}"></p>
+
         <input type="submit" value="Submit">
     </label>
+
+
 </form>
 
 
